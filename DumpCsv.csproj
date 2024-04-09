@@ -10,6 +10,8 @@
   <ItemGroup>
     <Reference Include="SaintCoinach">
       <HintPath>SaintCoinach.Cmd\SaintCoinach.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
   </ItemGroup>
 

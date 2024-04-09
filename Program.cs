@@ -2,10 +2,16 @@
 using SaintCoinach;
 using SaintCoinach.Ex;
 
+if (args.Length < 3)
+{
+    Console.WriteLine("usage: dumpcsv path-to-game lang rawedx|allrawexd <out-path>");
+    return 0;
+}
+
 var dataPath = args[0];
 var inputLang = args[1];
 var type = args[2];
-var outPath = args[3];
+var outPath = args.Length > 3 ? args[3] : null;
 
 Console.WriteLine("Loading game data ...");
 
@@ -115,3 +121,4 @@ else if (type == "rawexd")
     }
     Console.WriteLine($"{successCount} files exported, {failCount} failed");
 }
+return 0;
